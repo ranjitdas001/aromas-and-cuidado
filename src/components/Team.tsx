@@ -10,7 +10,7 @@ const Team = () => {
       position: "Chief Executive Officer (CEO)",
       phone: "9957891520",
       email: "ankitaborgohain95@gmail.com",
-      image: "/src/assets/team_ankita_borgohain.jpg"
+      image: "/img/team_ankita_borgohain.jpg"
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const Team = () => {
       position: "Chief Operating Officer (COO)",
       phone: "936412960",
       email: "anantikam878@gmail.com",
-      image: "/src/assets/team_anantika.jpg"
+      image: "/img/team_anantika.jpg"
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const Team = () => {
       position: "Chief Marketing Officer",
       phone: "9707317546",
       email: "indroseng123@gmai.com",
-      image: "/src/assets/team_indroseng_singpho.jpg"
+      image: "/img/team_indroseng_singpho.jpg"
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const Team = () => {
       position: "Chief Financial Officer",
       phone: "6901654961",
       email: "paultonmoy922@gmail.com",
-      image: "/src/assets/team_tonmoy_paul.jpg"
+      image: "/img/team_tonmoy_paul.jpg"
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const Team = () => {
       position: "Chief Technology Officer",
       phone: "8822158445",
       email: "abhoy3214@gmail.com",
-      image: "/src/assets/team_abhoy_das.jpg"
+      image: "/img/team_abhoy_das.jpg"
     },
     {
       id: 6,
@@ -50,7 +50,7 @@ const Team = () => {
       position: "Product Head",
       phone: "6026690695",
       email: "dasrajkamal049@gmail.com",
-      image: "/src/assets/team_rajkamal_das.jpg"
+      image: "/img/team_rajkamal_das.jpg"
     },
     {
       id: 7,
@@ -58,7 +58,7 @@ const Team = () => {
       position: "Sales Head",
       phone: "6002517575",
       email: "dhananjayprasadprasad0@gmail.com ",
-      image: "/src/assets/team_dhananjay_kushwaha.jpg"
+      image: "/img/team_dhananjay_kushwaha.jpg"
     }
   ];
 
@@ -131,7 +131,7 @@ const Team = () => {
                 >
                   <div className="relative overflow-hidden">
                     <img
-                      src={member.image}
+                      public={member.image}
                       alt={member.name}
                       className="w-full h-[300px] sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                       style={{

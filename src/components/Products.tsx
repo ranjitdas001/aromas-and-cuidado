@@ -1,10 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import productPocketPerfume from "@/assets/product_pocket_perfume.jpg";
-import productPaperSoap from "@/assets/product_paper_soap_20pcs.jpg";
-import productIncenseStick from "@/assets/product_incense_stick.jpg";
-import productScentedCandle from "@/assets/product_scented_candle.jpg";
 
 const Products = () => {
   const products = [
@@ -13,7 +9,7 @@ const Products = () => {
       name: "Pocket Perfume",
       description: "Compact and convenient fragrance for on-the-go freshness.",
       price: "₹49",
-      image: productPocketPerfume,
+      image: "/img/product_pocket_perfume.jpg",
       badge: "Popular",
       features: ["Travel Friendly", "Long Lasting", "Unisex"]
     },
@@ -22,7 +18,7 @@ const Products = () => {
       name: "Paper Soap (20 pcs)",
       description: "Easy-to-carry paper soap sheets for instant hand wash anywhere.",
       price: "₹10",
-      image: productPaperSoap,
+      image: "/img/product_paper_soap.jpg",
       badge: "Value Pack",
       features: ["20 Sheets", "Portable", "Hygienic"]
     },
@@ -31,7 +27,7 @@ const Products = () => {
       name: "Incense Sticks",
       description: "Aromatic incense sticks to refresh your space and mind.",
       price: "₹45",
-      image: productIncenseStick,
+      image: "/img/product_incense_stick.jpg",
       badge: "Aromatic",
       features: ["Long Burning", "Natural Fragrance", "Relaxing"]
     },
@@ -40,7 +36,7 @@ const Products = () => {
       name: "Scented Candle",
       description: "Delightful scented candle to create a soothing ambiance.",
       price: "₹49",
-      image: productScentedCandle,
+      image: "/img/product_scented_candle.jpg",
       badge: "Soothing",
       features: ["Slow Burn", "Rich Aroma", "Decorative"]
     }
