@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -17,7 +16,7 @@ const Hero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url("/img/hero-bg.jpg")` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/40"></div>
       </div>

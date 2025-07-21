@@ -18,7 +18,7 @@ const Products = () => {
       name: "Paper Soap (20 pcs)",
       description: "Easy-to-carry paper soap sheets for instant hand wash anywhere.",
       price: "₹10",
-      image: "/img/product_paper_soap.jpg",
+      image: "/img/product_paper_soap_20pcs.jpg",
       badge: "Value Pack",
       features: ["20 Sheets", "Portable", "Hygienic"]
     },

@@ -40,7 +40,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="font-display text-2xl font-bold text-primary flex gap-5">
           <img
-              src="/src/assets/logo.jpg"
+              src="/img/logo.jpg"
               alt="Aromas & Cuidado Logo"
               className="h-10 w-10 object-contain rounded-full transition-transform duration-300 group-hover:scale-105"
               style={{ minWidth: 40 }}

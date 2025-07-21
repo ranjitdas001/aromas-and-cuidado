@@ -131,7 +131,7 @@ const Team = () => {
                 >
                   <div className="relative overflow-hidden">
                     <img
-                      public={member.image}
+                      src={member.image}
                       alt={member.name}
                       className="w-full h-[300px] sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                       style={{
