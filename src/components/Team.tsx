@@ -1,8 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+
+import { useRef, useEffect } from "react";
 
 const Team = () => {
+  // Auto-scroll effect every 3 seconds and loop
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    const scrollInterval = setInterval(() => {
+      if (!scrollContainer) return;
+      const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      // If at or near the end, scroll back to start
+      if (Math.ceil(scrollContainer.scrollLeft + scrollByAmount) >= maxScroll) {
+        scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        scrollContainer.scrollBy({ left: scrollByAmount, behavior: "smooth" });
+      }
+    }, 5000);
+    return () => clearInterval(scrollInterval);
+  }, []);
   const teamMembers = [
     {
       id: 1,
@@ -63,8 +81,8 @@ const Team = () => {
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollByAmount = 355; // px
 
-  const scrollByAmount = 320; // px
 
   const scrollLeft = () => {
     if (scrollRef.current) {
