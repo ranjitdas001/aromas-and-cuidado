@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { getCart } from "@/lib/cart";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +31,9 @@ const Navbar = () => {
     { name: "Contact", id: "footer" },
   ];
 
+  // Get total items in cart
+  const totalCartItems = getCart().reduce((sum, item) => sum + item.quantity, 0);
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -49,7 +54,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -60,6 +65,15 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            <Link to="/cart" className="font-body text-foreground hover:text-primary transition-colors duration-200 ml-6 relative group rounded-md px-3 py-2">
+              Cart
+              <span className="absolute -bottom-0                                                                                                                                                                                                                                                                    left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              {totalCartItems > 0 && (
+                <span className="absolute -top-2 -right-4 bg-primary text-white rounded-full px-2 py-0.5 text-xs font-bold shadow-lg">
+                  {totalCartItems}
+                </span>
+              )}
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -85,6 +99,15 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
+            <Link to="/cart" className="block w-full text-left py-3 font-body text-foreground hover:text-primary transition-colors duration-200 relative group rounded-md px-3">
+              Cart
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              {totalCartItems > 0 && (
+                <span className="absolute -top-2 -right-4 bg-primary text-white rounded-full px-2 py-0.5 text-xs font-bold shadow-lg">
+                  {totalCartItems}
+                </span>
+              )}
+            </Link>
           </div>
         )}
       </div>

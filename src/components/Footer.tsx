@@ -38,9 +38,15 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="font-body font-semibold text-background">Follow Us</h4>
               <div className="flex space-x-4">
-                <Button size="icon" variant="ghost" className="text-background hover:text-primary-glow hover:bg-background/10">
-                  <Instagram className="h-5 w-5" />
-                </Button>
+                <a
+                  href="https://www.instagram.com/aromas_y_cuidado?utm_source=ig_web_button_share_sheet&igsh=MW1ycnJqZTE5bXdsOA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="icon" variant="ghost" className="text-background hover:text-primary-glow hover:bg-background/10">
+                    <Instagram className="h-5 w-5" />
+                  </Button>
+                </a>
                 <Button size="icon" variant="ghost" className="text-background hover:text-primary-glow hover:bg-background/10">
                   <Facebook className="h-5 w-5" />
                 </Button>

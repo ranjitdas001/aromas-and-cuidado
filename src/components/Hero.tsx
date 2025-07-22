@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url("/img/hero-bg.jpg")` }}
+        style={{ backgroundImage: `url("/img/hero-bg2.jpg")` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/40"></div>
       </div>
@@ -31,8 +31,8 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="font-body text-2xl md:text-3xl font-bold text-primary-glow mb-6 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
-            Where every fragrance <span className="text-luxury">tells a story!!</span>
+          <p className="font-body text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed max-w-2xl mx-auto" style={{ textShadow: "0 2px 8px #000, 0 0 2px #fff" }}>
+            Where every fragrance <span className="text-luxury font-extrabold text-yellow-400" style={{ textShadow: "0 2px 12px #000, 0 0 4px #fff" }}>tells a story!!</span>
           </p>
           <p className="font-body text-xl md:text-2xl font-semibold text-foreground mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow">
             Discover our <span className="text-primary">premium fragrance collection</span> for unique self-care.
